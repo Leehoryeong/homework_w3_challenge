@@ -18,7 +18,7 @@ class LottoController < ApplicationController
   	# puts lotto_hash    #=> JSON 데이터가 Hash 로 변환되어 출력.
 
   	# 위의 주석된 코드들을 1줄로 줄인 코드! get_info에 hash가 저장되어있음.
-  	get_info = JSON.parse open('http://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=').read
+  	get_info = JSON.parse open('http://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=800').read
 
   	drw_numbers = []		# 이번주 당첨번호
     get_info.each do |k, v|
