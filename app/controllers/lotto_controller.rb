@@ -29,7 +29,26 @@ class LottoController < ApplicationController
  
     # 여기서 부터 코드를 작성해 주세요. 로또 번호 6개 랜덤생성 후 정렬.
     # 이번주 당첨번호와 비교해서 1등부터 6등까지의 결과를 출력해내세요.
-
+    
+    random_vars = (1..45).to_a.sample(6)
+    random_vars.sort!
+    
+    bet_num = (random_vars & drw_numbers)
+    
+      if bet_num.length == 6
+      result = "1등"
+      elsif (random_vars & (drw_numbers || bonus_number)).length == 6
+      result = "2등"
+      elsif bet_num.length == 5
+      result = "3등"
+      elsif bet_num.length == 4           
+      result = "4등"
+      elsif bet_num.length == 3
+      result = "5등"
+      else 
+      result = "꽝"
+      end
+    
 
 
 
@@ -45,7 +64,9 @@ class LottoController < ApplicationController
     # 인스턴스에 변수를 저장해주세요!
     @drw_numbers = drw_numbers
     @bonus_number = bonus_number
-
+    @random_vars = random_vars
+    @result = result
+    @bet_num = bet_num
     # 추가생성한 변수들 인스턴스로 지정.
 
   end

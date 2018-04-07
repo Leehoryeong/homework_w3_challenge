@@ -1,26 +1,12 @@
-# 3주차 첼린지 로또
+# w3 첼린지 로또 만들기
 
-로또 번호 추천 프로그램을 만들어보자.
-로또 api를 이용해 이번 주 당첨정보를 받아와 비교해보자.
+### 구현의도
+주어진 배열과 랜덤으로 뽑은 배열 사이에서 겹치는 숫자에 따라서 결과 값을 다르게 보여주는 함수를 구현!
 
-(api에 관련된 부분의 코드는 이미 적혀있습니다.)
+### 오류내용 + 오류 해결 방법
+처음에 6개를 랜덤으로 뽑는 것 조차 어떻게 해야할지 감이 안왔다. 혼자서 이것저것 시도해보다가 .sample을 발견해서 사용하는데 성공했다.
+그리고 내가 뽑은 숫자와 당첨 번호의 비교는 쉽게 생각했는데 겹치는 숫자를 보여주는 것에서 멈췄었는데 그냥 변수를 하나 설정해주면 되는 것이었다.
+생각보다 간단하곳에서 엄청 헤맨것 같다. 
 
-1~45까지의 숫자 중 6개를 랜덤으로 뽑아 이번주 당첨번호와 비교하는 프로그램을 만들어주세요!
-
-1. `config/routes.rb`에서 root경로 지정해주기
-2. `app/controllers/lotto_controller.rb` 에 코드 추가하기
-3. `app/views/lotto/index.html.erb`, `app/views/lotto/pick_and_check.html.erb` 코드 추가
-
-
-
-#### 유의사항
-- json에 대한 설명은 주석으로 되어있으므로 읽고 해주세요.
-
-
-## Author
-
-written by [정다혜](https://dh00023.github.io).
-
-![](https://avatars.githubusercontent.com/dh00023?v=2&s=100)
-
-<a href="https://dh00023.github.io" target="_blank" class="btn btn-black"><i class="fa fa-github fa-lg"></i> Visit on Github Page &rarr;</a>
+### 간단한 소감
+코딩이라는게 참 한번 생각 해내기만 하면 쉬운데 그 생각까지의 과정이 정말 어려운것 같다. 그리고 ruby에서 제공하는 기본 함수들을 정말 많이 알아둘 필요가 있는 것 같다 .
